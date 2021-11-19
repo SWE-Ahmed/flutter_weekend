@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "265199761276",
+    "project_id": "medica-kfupm",
+    "storage_bucket": "medica-kfupm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265199761276:android:20c1e5c749bc7c341c16f9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_weekend_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265199761276-22tr18dr2nfolv5rr3os6nfvk97t2n6v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdyttTHqddnBWX5Nf6lBRF6HHMnHEQbS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265199761276-22tr18dr2nfolv5rr3os6nfvk97t2n6v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
