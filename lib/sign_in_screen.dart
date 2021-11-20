@@ -15,6 +15,7 @@ class SignInGoogle extends StatelessWidget {
   }
 }
 
+// widget definition
 class SignInPage extends StatelessWidget {
   const SignInPage({
     Key key,
@@ -23,10 +24,6 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /* appBar: AppBar(
-        title: const Text("KFUPM Clinic"),
-        backgroundColor: splashColor,
-      ),*/
       // the following container manages the Sign in page for the user
       body: Container(
         padding: const EdgeInsets.all(16),
@@ -34,7 +31,7 @@ class SignInPage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 40,
+                height: 150,
               ),
               Image.asset(
                 signInLogo,
@@ -64,14 +61,17 @@ class SignInPage extends StatelessWidget {
                     FontAwesomeIcons.google,
                     color: Colors.red,
                   ),
-                  label: Text("Sign up with Google")),
+                  label: Text("Continue with Google",
+                      style: GoogleFonts.montserrat(fontSize: 18))),
               SizedBox(
-                height: 30,
+                height: 40,
               ),
-              Row(
-                children: [
-                  Text("Already have an account? "),
-                  TextButton(onPressed: () {}, child: Text("Sign in"))
+              Column(
+                children: const [
+                  Text(
+                    "*Continue with Google even if you already have an account ",
+                    style: TextStyle(fontSize: 15),
+                  ),
                 ],
               ),
             ],
@@ -111,5 +111,10 @@ class GoogleSignInProvider extends ChangeNotifier {
     } catch (PlatformException) {
       return SignInPage();
     }
+  }
+
+  Future googleLogOut() async {
+    await googleSignIn.disconnect();
+    FirebaseAuth.instance.signOut();
   }
 }
